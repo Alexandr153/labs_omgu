@@ -9,14 +9,8 @@
 /Users/alexandrmitin/Documents/lab1/lab/bin/Debug/net8.0/lab.dll
 /Users/alexandrmitin/Documents/lab1/lab/bin/Debug/net8.0/lab.pdb
 /Users/alexandrmitin/Documents/lab1/lab/bin/Debug/net8.0/Microsoft.VisualStudio.CodeCoverage.Shim.dll
-/Users/alexandrmitin/Documents/lab1/lab/bin/Debug/net8.0/Microsoft.Extensions.Configuration.dll
-/Users/alexandrmitin/Documents/lab1/lab/bin/Debug/net8.0/Microsoft.Extensions.Configuration.Abstractions.dll
 /Users/alexandrmitin/Documents/lab1/lab/bin/Debug/net8.0/Microsoft.Extensions.Configuration.FileExtensions.dll
 /Users/alexandrmitin/Documents/lab1/lab/bin/Debug/net8.0/Microsoft.Extensions.Configuration.Json.dll
-/Users/alexandrmitin/Documents/lab1/lab/bin/Debug/net8.0/Microsoft.Extensions.FileProviders.Abstractions.dll
-/Users/alexandrmitin/Documents/lab1/lab/bin/Debug/net8.0/Microsoft.Extensions.FileProviders.Physical.dll
-/Users/alexandrmitin/Documents/lab1/lab/bin/Debug/net8.0/Microsoft.Extensions.FileSystemGlobbing.dll
-/Users/alexandrmitin/Documents/lab1/lab/bin/Debug/net8.0/Microsoft.Extensions.Primitives.dll
 /Users/alexandrmitin/Documents/lab1/lab/bin/Debug/net8.0/Microsoft.TestPlatform.CoreUtilities.dll
 /Users/alexandrmitin/Documents/lab1/lab/bin/Debug/net8.0/Microsoft.TestPlatform.PlatformAbstractions.dll
 /Users/alexandrmitin/Documents/lab1/lab/bin/Debug/net8.0/Microsoft.VisualStudio.TestPlatform.ObjectModel.dll
@@ -98,3 +92,8 @@
 /Users/alexandrmitin/Documents/lab1/lab/obj/Debug/net8.0/lab.pdb
 /Users/alexandrmitin/Documents/lab1/lab/obj/Debug/net8.0/lab.genruntimeconfig.cache
 /Users/alexandrmitin/Documents/lab1/lab/obj/Debug/net8.0/ref/lab.dll
+/Users/alexandrmitin/Documents/lab1/lab/bin/Debug/net8.0/NLog.dll
+/Users/alexandrmitin/Documents/lab1/lab/bin/Debug/net8.0/NLog.Extensions.Logging.dll
+/Users/alexandrmitin/Documents/lab1/lab/bin/Debug/net8.0/NLog.Web.AspNetCore.dll
+/Users/alexandrmitin/Documents/lab1/lab/obj/Debug/net8.0/lab.sourcelink.json
+/Users/alexandrmitin/Documents/lab1/lab/bin/Debug/net8.0/nlog.config

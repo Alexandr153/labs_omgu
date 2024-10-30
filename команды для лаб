@@ -1,0 +1,9 @@
+1 лаба:
+    Пакеты:
+    <PackageReference Include="coverlet.collector" Version="6.0.0" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.8.0" />
+2 лаба:
+Сформировать конфигурацию - echo '{ "Message": "%name% hired %hired%" }' > appsettings.json
+    Пакеты:
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="8.0.1" />
+    <PackageReference Include="NLog.Web.AspNetCore" Version="5.3.14" />

@@ -10,6 +10,7 @@
         "dependencies": {
           "Microsoft.Extensions.Configuration.Json": "8.0.1",
           "Microsoft.NET.Test.Sdk": "17.8.0",
+          "NLog.Web.AspNetCore": "5.3.14",
           "coverlet.collector": "6.0.0"
         },
         "runtime": {
@@ -29,23 +30,11 @@
         "dependencies": {
           "Microsoft.Extensions.Configuration.Abstractions": "8.0.0",
           "Microsoft.Extensions.Primitives": "8.0.0"
-        },
-        "runtime": {
-          "lib/net8.0/Microsoft.Extensions.Configuration.dll": {
-            "assemblyVersion": "8.0.0.0",
-            "fileVersion": "8.0.23.53103"
-          }
         }
       },
       "Microsoft.Extensions.Configuration.Abstractions/8.0.0": {
         "dependencies": {
           "Microsoft.Extensions.Primitives": "8.0.0"
-        },
-        "runtime": {
-          "lib/net8.0/Microsoft.Extensions.Configuration.Abstractions.dll": {
-            "assemblyVersion": "8.0.0.0",
-            "fileVersion": "8.0.23.53103"
-          }
         }
       },
       "Microsoft.Extensions.Configuration.FileExtensions/8.0.1": {
@@ -77,15 +66,15 @@
           }
         }
       },
+      "Microsoft.Extensions.DependencyInjection/8.0.0": {
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "8.0.0"
+        }
+      },
+      "Microsoft.Extensions.DependencyInjection.Abstractions/8.0.0": {},
       "Microsoft.Extensions.FileProviders.Abstractions/8.0.0": {
         "dependencies": {
           "Microsoft.Extensions.Primitives": "8.0.0"
-        },
-        "runtime": {
-          "lib/net8.0/Microsoft.Extensions.FileProviders.Abstractions.dll": {
-            "assemblyVersion": "8.0.0.0",
-            "fileVersion": "8.0.23.53103"
-          }
         }
       },
       "Microsoft.Extensions.FileProviders.Physical/8.0.0": {
@@ -93,30 +82,28 @@
           "Microsoft.Extensions.FileProviders.Abstractions": "8.0.0",
           "Microsoft.Extensions.FileSystemGlobbing": "8.0.0",
           "Microsoft.Extensions.Primitives": "8.0.0"
-        },
-        "runtime": {
-          "lib/net8.0/Microsoft.Extensions.FileProviders.Physical.dll": {
-            "assemblyVersion": "8.0.0.0",
-            "fileVersion": "8.0.23.53103"
-          }
         }
       },
-      "Microsoft.Extensions.FileSystemGlobbing/8.0.0": {
-        "runtime": {
-          "lib/net8.0/Microsoft.Extensions.FileSystemGlobbing.dll": {
-            "assemblyVersion": "8.0.0.0",
-            "fileVersion": "8.0.23.53103"
-          }
+      "Microsoft.Extensions.FileSystemGlobbing/8.0.0": {},
+      "Microsoft.Extensions.Logging/8.0.0": {
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection": "8.0.0",
+          "Microsoft.Extensions.Logging.Abstractions": "8.0.0",
+          "Microsoft.Extensions.Options": "8.0.0"
         }
       },
-      "Microsoft.Extensions.Primitives/8.0.0": {
-        "runtime": {
-          "lib/net8.0/Microsoft.Extensions.Primitives.dll": {
-            "assemblyVersion": "8.0.0.0",
-            "fileVersion": "8.0.23.53103"
-          }
+      "Microsoft.Extensions.Logging.Abstractions/8.0.0": {
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "8.0.0"
         }
       },
+      "Microsoft.Extensions.Options/8.0.0": {
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "8.0.0",
+          "Microsoft.Extensions.Primitives": "8.0.0"
+        }
+      },
+      "Microsoft.Extensions.Primitives/8.0.0": {},
       "Microsoft.NET.Test.Sdk/17.8.0": {
         "dependencies": {
           "Microsoft.CodeCoverage": "17.8.0",
@@ -378,6 +365,38 @@
           }
         }
       },
+      "NLog/5.3.4": {
+        "runtime": {
+          "lib/netstandard2.0/NLog.dll": {
+            "assemblyVersion": "5.0.0.0",
+            "fileVersion": "5.3.4.2778"
+          }
+        }
+      },
+      "NLog.Extensions.Logging/5.3.13": {
+        "dependencies": {
+          "Microsoft.Extensions.Configuration.Abstractions": "8.0.0",
+          "Microsoft.Extensions.Logging": "8.0.0",
+          "NLog": "5.3.4"
+        },
+        "runtime": {
+          "lib/net8.0/NLog.Extensions.Logging.dll": {
+            "assemblyVersion": "5.0.0.0",
+            "fileVersion": "5.3.13.579"
+          }
+        }
+      },
+      "NLog.Web.AspNetCore/5.3.14": {
+        "dependencies": {
+          "NLog.Extensions.Logging": "5.3.13"
+        },
+        "runtime": {
+          "lib/net8.0/NLog.Web.AspNetCore.dll": {
+            "assemblyVersion": "5.0.0.0",
+            "fileVersion": "5.3.14.1147"
+          }
+        }
+      },
       "NuGet.Frameworks/6.5.0": {
         "runtime": {
           "lib/netstandard2.0/NuGet.Frameworks.dll": {
@@ -437,6 +456,20 @@
       "path": "microsoft.extensions.configuration.json/8.0.1",
       "hashPath": "microsoft.extensions.configuration.json.8.0.1.nupkg.sha512"
     },
+    "Microsoft.Extensions.DependencyInjection/8.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-V8S3bsm50ig6JSyrbcJJ8bW2b9QLGouz+G1miK3UTaOWmMtFwNNNzUf4AleyDWUmTrWMLNnFSLEQtxmxgNQnNQ==",
+      "path": "microsoft.extensions.dependencyinjection/8.0.0",
+      "hashPath": "microsoft.extensions.dependencyinjection.8.0.0.nupkg.sha512"
+    },
+    "Microsoft.Extensions.DependencyInjection.Abstractions/8.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-cjWrLkJXK0rs4zofsK4bSdg+jhDLTaxrkXu4gS6Y7MAlCvRyNNgwY/lJi5RDlQOnSZweHqoyvgvbdvQsRIW+hg==",
+      "path": "microsoft.extensions.dependencyinjection.abstractions/8.0.0",
+      "hashPath": "microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512"
+    },
     "Microsoft.Extensions.FileProviders.Abstractions/8.0.0": {
       "type": "package",
       "serviceable": true,
@@ -457,6 +490,27 @@
       "sha512": "sha512-OK+670i7esqlQrPjdIKRbsyMCe9g5kSLpRRQGSr4Q58AOYEe/hCnfLZprh7viNisSUUQZmMrbbuDaIrP+V1ebQ==",
       "path": "microsoft.extensions.filesystemglobbing/8.0.0",
       "hashPath": "microsoft.extensions.filesystemglobbing.8.0.0.nupkg.sha512"
+    },
+    "Microsoft.Extensions.Logging/8.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-tvRkov9tAJ3xP51LCv3FJ2zINmv1P8Hi8lhhtcKGqM+ImiTCC84uOPEI4z8Cdq2C3o9e+Aa0Gw0rmrsJD77W+w==",
+      "path": "microsoft.extensions.logging/8.0.0",
+      "hashPath": "microsoft.extensions.logging.8.0.0.nupkg.sha512"
+    },
+    "Microsoft.Extensions.Logging.Abstractions/8.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-arDBqTgFCyS0EvRV7O3MZturChstm50OJ0y9bDJvAcmEPJm0FFpFyjU/JLYyStNGGey081DvnQYlncNX5SJJGA==",
+      "path": "microsoft.extensions.logging.abstractions/8.0.0",
+      "hashPath": "microsoft.extensions.logging.abstractions.8.0.0.nupkg.sha512"
+    },
+    "Microsoft.Extensions.Options/8.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-JOVOfqpnqlVLUzINQ2fox8evY2SKLYJ3BV8QDe/Jyp21u1T7r45x/R/5QdteURMR5r01GxeJSBBUOCOyaNXA3g==",
+      "path": "microsoft.extensions.options/8.0.0",
+      "hashPath": "microsoft.extensions.options.8.0.0.nupkg.sha512"
     },
     "Microsoft.Extensions.Primitives/8.0.0": {
       "type": "package",
@@ -492,6 +546,27 @@
       "sha512": "sha512-ppPFpBcvxdsfUonNcvITKqLl3bqxWbDCZIzDWHzjpdAHRFfZe0Dw9HmA0+za13IdyrgJwpkDTDA9fHaxOrt20A==",
       "path": "newtonsoft.json/13.0.1",
       "hashPath": "newtonsoft.json.13.0.1.nupkg.sha512"
+    },
+    "NLog/5.3.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-gLy7+O1hEYJXIlcTr1/VWjGXrZTQFZzYNO18IWasD64pNwz0BreV+nHLxWKXWZzERRzoKnsk2XYtwLkTVk7J1A==",
+      "path": "nlog/5.3.4",
+      "hashPath": "nlog.5.3.4.nupkg.sha512"
+    },
+    "NLog.Extensions.Logging/5.3.13": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-i1n5+ZB6Hd5na2eWj7zjeIH4SS3qzmSgoSIGpxp3B0lJ8p/Cmg59NrDE9GReAAmKbQVbP0d/+e3S/6j79Tnaww==",
+      "path": "nlog.extensions.logging/5.3.13",
+      "hashPath": "nlog.extensions.logging.5.3.13.nupkg.sha512"
+    },
+    "NLog.Web.AspNetCore/5.3.14": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-cc6VM07vrRI73JhIhC2LWyDKgFtgNfXf5UmJ4841qhp81nCN5CmOm3/YIA0YgStOWihrM3jVNlNQtDgsZ6wrJg==",
+      "path": "nlog.web.aspnetcore/5.3.14",
+      "hashPath": "nlog.web.aspnetcore.5.3.14.nupkg.sha512"
     },
     "NuGet.Frameworks/6.5.0": {
       "type": "package",
