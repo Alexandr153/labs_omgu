@@ -132,7 +132,9 @@ $RECYCLE.BIN/
 
 _NCrunch*
 
-lab/bin
-lab/obj
-labTests/bin
-labTests/obj
+*.suo
+*.user
+_ReSharper.*
+bin
+obj
+packages
