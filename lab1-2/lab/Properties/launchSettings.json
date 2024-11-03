@@ -1,6 +1,6 @@
 {
     "profiles": {
-      "lab": {
+      "lab1-2": {
         "commandName": "Project",
         "commandLineArgs": "--name \"Ivanov Ivan Ivanovich\" --hired \"01.01.2015\""
       }
