@@ -45,7 +45,7 @@ public class Program()
         // Обрабатываем исключение FormatException, которое выбрасывается в случае неудачной попытки парсинга полученной даты(неверный формат даты)
         catch (FormatException ex)
         { 
-            logger.Error("Hired date is incorrect. Please, use the format DD.MM.YYYY.");
+            logger.Error($"Hired date is incorrect. Please, use the format DD.MM.YYYY. {ex}");
             return;
         }            
     }
