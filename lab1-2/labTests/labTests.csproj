@@ -25,7 +25,7 @@
 
   <!-- Тут указываем путь до csproj пространства имен нашей программы(.csproj, которая лежит в другом файле) -->
   <ItemGroup>
-    <ProjectReference Include="../lab1-2/lab.csproj" />
+    <ProjectReference Include="../lab/lab.csproj" />
   </ItemGroup>
 
 </Project>
