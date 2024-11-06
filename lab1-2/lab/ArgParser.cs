@@ -13,6 +13,7 @@ public class ArgParser
     // Константы указывающие на доступные аргументы
     public static readonly string ARG_NAME = "--name"; 
     public static readonly string ARG_HIRED = "--hired";
+    public static readonly string ARG_VERBOSE = "--verbose";
 
     // Массив, который будет хранить полученные аргументы
     private static string[] _args = null;
@@ -22,14 +23,16 @@ public class ArgParser
     static ArgParser()
     {
         _args = Environment.GetCommandLineArgs();
-        logger.Info("String arguments received successfully");
+        logger.Info($"Loaded {_args.Length} args from command line");
+        logger.Info("Args loaded: " + String.Join(";", _args));
     }
 
     // Запись всех аргументов вручную(для тестирования)
     public static void SetArgs(params string[] args)
     {
         _args = args;
-        logger.Info("String arguments received manually successfully");
+        logger.Info($"Loaded {_args.Length} args");
+        logger.Info("Args loaded: " + String.Join(";", _args));
     }
 
     // Проверка наличия указанного в параметре аргумента с полученным из командной строки(терминала)
@@ -40,11 +43,11 @@ public class ArgParser
         {
             if (string.Compare(_args[i], argName, ignoreCase:true) == 0)
             {
-                logger.Debug("The specified argument was found");
+                logger.Info($"Arg {argName} was found");
                 return true;
             }
         }
-        logger.Debug("The specified argument was not found");
+        logger.Info($"The specified argument {argName} was not found");
         return false;
     }
 
@@ -58,11 +61,11 @@ public class ArgParser
             {
                 if (i + 1 > _args.Length - 1)
                     return null;
-                logger.Debug("Argument value returned");
+                logger.Info($"Argument value {argName} returned");
                 return _args[i+1];
             }
         }
-        logger.Debug("No argument value was returned");
+        logger.Info("No argument value was returned");
         return null;
     }
 }

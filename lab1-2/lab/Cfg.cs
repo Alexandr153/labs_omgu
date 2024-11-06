@@ -24,7 +24,7 @@ public class Cfg
             ConfigurationBuilder builder = new ConfigurationBuilder();
             builder.AddJsonFile(APP_SETTINGS_PATH, false);
             config = builder.Build();
-            logger.Debug("Configuration file compiled");
+            logger.Info("Configuration file compiled");
         }
         catch (TypeInitializationException ex)
         {
@@ -36,7 +36,7 @@ public class Cfg
     // Возвращаем значение по параметру из конфиг файла(в нашем случае там 1 значение)
     public static string ReadString(string paramName)
     {
-        logger.Debug("Configuration parameter returned");
+        logger.Info("Configuration parameter returned");
         return config.GetSection(paramName).Value;
     }
 }

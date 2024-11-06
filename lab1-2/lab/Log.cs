@@ -1,26 +1,33 @@
+using lab;
+using Microsoft.AspNetCore.Diagnostics;
 using NLog;
 
 public class Log
 {
-    private static Logger _logger = LogManager.GetCurrentClassLogger();
+    private static readonly Logger logger = LogManager.GetCurrentClassLogger();
+    private static readonly bool isVerbose = ArgParser.HasArg(ArgParser.ARG_VERBOSE);
 
-    public void Debug(string message)
+    public void Debug(string message, params object[] args)
     {
-        _logger.Debug(message);
+        if (!isVerbose)
+        {
+            return;
+        }
+        logger.Debug(string.Format(message, args));
     }
 
-    public void Info(string message)
+    public void Info(string message, params object[] args)
     {
-        _logger.Info(message);
+        logger.Info(string.Format(message, args));
     }
 
-    public void Console(string message)
+    public void Console(string message, params object[] args)
     {
-        _logger.Trace(message); 
+        logger.Trace(string.Format(message, args)); 
     }
 
-    public void Error(string message)
+    public void Error(string message, params object[] args)
     {
-        _logger.Error(message);
+        logger.Error(string.Format(message, args));
     }
 }
