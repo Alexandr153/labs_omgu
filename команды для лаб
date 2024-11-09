@@ -7,3 +7,6 @@
     Пакеты:
     <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="8.0.1" />
     <PackageReference Include="NLog.Web.AspNetCore" Version="5.3.14" />
+3 лаба:
+    Пакеты:
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
