@@ -1,6 +1,5 @@
 using Newtonsoft.Json;
 using lab3;
-using System.Reflection.Metadata;
 
 public class DataEngine
 {
@@ -39,7 +38,7 @@ public class DataEngine
                 // Обновление свойств
                 foreach (var update in updates)
                 {
-                    switch (update.Key)
+                    switch (update.Key) 
                     {
                         case "Email":
                             employee.Email = update.Value == null ? employee.Email : (string)update.Value;
@@ -61,13 +60,13 @@ public class DataEngine
 
                 break; // Если нашли сотрудника, то прекращаем поиск после замены
             }
-            Console.WriteLine("Информация обновлена");
         }
 
 
         // Сериализация списка обратно в строку JSON
         string updatedJson = JsonConvert.SerializeObject(employees).Replace("},", "}\n").Replace("[", "").Replace("]", "");
         File.WriteAllText(_filePath, updatedJson);
+        Console.WriteLine("Информация обновлена");
     }
 
     // Метод для удаления сотрудника из списка

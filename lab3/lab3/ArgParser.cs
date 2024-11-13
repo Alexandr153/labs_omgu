@@ -9,6 +9,9 @@ namespace lab3;
 public class ArgParser
 {
     // Константы указывающие на доступные аргументы
+    public static readonly string ARG_COUNT = "--count";
+    public static readonly string ARG_RELEASE = "--release";
+
     public static readonly string ARG_NAME = "--name"; 
     public static readonly string ARG_EMAIL = "--email";
     public static readonly string ARG_PHONE = "--phone";

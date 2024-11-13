@@ -1,13 +1,29 @@
-﻿using System.ComponentModel.DataAnnotations;
-using System.Linq.Expressions;
-using System.Security.Cryptography.X509Certificates;
-
-namespace lab3;
+﻿namespace lab3;
 
 public class Program
 {
     public static void Main(string[] args)
     {
+        int opAdd = ArgParser.HasArg(ArgParser.ARG_ADD) ? 1 : 0;
+        int opList = ArgParser.HasArg(ArgParser.ARG_LIST) ? 1 : 0;
+        int opUpdate = ArgParser.HasArg(ArgParser.ARG_UPDATE) ? 1 : 0;
+        int opRemove = ArgParser.HasArg(ArgParser.ARG_REMOVE) ? 1 : 0;
+        int opShow = ArgParser.HasArg(ArgParser.ARG_SHOW) ? 1 : 0;
+
+        int opSum = opAdd + opList + opRemove + opShow + opUpdate;
+
+        if (opSum == 0)
+        {
+            Console.WriteLine("Ошибка. Операция не указана");
+            return;
+        }
+        else if (opSum > 1)
+        {
+            Console.WriteLine("Ошибка. Указано больше 1 операции");
+            return;
+        }
+
+
         string filePath = "employees.json";
         // Получаем значение первого аргумента
         string FirstArg = args[0];
@@ -28,6 +44,8 @@ public class Program
                 return;
             }
         }
+
+
         // Оператор --add
         if (FirstArg == ArgParser.ARG_ADD)
         {
@@ -164,7 +182,7 @@ public class Program
             {
                 ["Email"] = Email,
                 ["FullName"] = FullName,
-                ["Phine"] = Phone,
+                ["Phone"] = Phone,
                 ["Hired"] = Hired,
                 ["Fired"] = Fired
             });
